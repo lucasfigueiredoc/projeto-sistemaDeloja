@@ -30,3 +30,5 @@ class Cliente():
   ##  cliente1 = Cliente()
     
   ##  def cadastrarCliente(self)
+  
+  

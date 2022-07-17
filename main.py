@@ -5,7 +5,16 @@ from Objetos.Clientes import Cliente
 
 ##root = Tk()
 
+def clienteAdd(clientAd[y]):
+    for i in clienteAd:
+        print('Cadastrando Cliente, adicione os dados respectivamente: \n')
+        clientAd[i] = Cliente(input('Nome: '), input('CPF: '), input('Endereço completo: '))
 
+
+
+y=10
+
+clienteAd = [y]
 
 def ArtMenu():{
     print("----------------------------------"),
@@ -22,7 +31,7 @@ def ArtMenu():{
 def operacao(x):
     match x:
         case '1':
-            return Cliente.nome(input('test '))
+            return clienteAdd()
 
         case '2':
             return print("Case 2 selected")
