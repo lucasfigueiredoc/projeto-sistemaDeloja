@@ -1,11 +1,11 @@
+from email.errors import ObsoleteHeaderDefect
 from http import client
 from tkinter import *
 from Objetos.Clientes import Cliente
 
+##root = Tk()
 
-root = Tk()
 
-root.mainloop()
 
 def ArtMenu():{
     print("----------------------------------"),
@@ -17,58 +17,28 @@ def ArtMenu():{
     print("----------------------------------")
     
 }
+##root.mainloop()
 
-def funCase(x):
-    x = input("define:  ")
-    case = switch.get(x, default)
-    case()
+def operacao(x):
+    match x:
+        case '1':
+            return Cliente.nome(input('test '))
+
+        case '2':
+            return print("Case 2 selected")
     
-
-def function1():
-
-    Cliente.nome = (input('Insira nome: '))
-    Clientes.Cliente.cpf (input('Insira CPF: '))
-    Clientes.Cliente.endereco (input('Insira endereço: '))
-
-    funCase(x)
-
-def function2():
-    print("Case 2 selected")
-    funCase(x)
+        case '3':
+            return print("Case 3 selected")
     
-def function3():
-    print("Case 3 selected")
-    funCase(x)
+        case '4':
+            return print("Case 4 selected")
     
-def function4():
-    print("Case 4 selected")
-    funCase(x)
-
-def function5():
-    print("Case 5 selected")
-    funCase(x)
-
-
-
-def default():
-    print("Valor inválido, digite novamente")
-    funCase(x)
-
-if __name__ == "__main__":
-    switch = {
-        "1" : function1,
-        "2" : function2,
-        "3" : function3,
-        "4" : function4,
-        "5" : function5
-    }
-else:{
-    funCase()
-}
-
+        case '5':
+            return print('Case 5')
+        
+        case _:
+            return print('Valor inválido, retorne!'), operacao(input('Define '))
+            
 ArtMenu()
 
-
-
-x = input("define:  ")
-funCase(x)
+operacao(input('Define '))

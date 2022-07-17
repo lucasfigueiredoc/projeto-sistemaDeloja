@@ -1,7 +1,7 @@
 
 
 class Cliente():
-    def __init__(self, nome: str, cpf: str, endereco: str) -> None:
+    def __init__(self, nome: str, cpf: str, endereco: str):
         self.__nome = nome
         self.__cpf = cpf
         self.__endereco = endereco
@@ -9,8 +9,10 @@ class Cliente():
     @property
     def nome(self):
             return self.__nome
+    @property
     def cpf(self):
             return self.__cpf
+    @property
     def endereco(self):
             return self.__endereco
     
@@ -27,4 +29,4 @@ class Cliente():
         self._endereco = value
   ##  cliente1 = Cliente()
     
-    
+  ##  def cadastrarCliente(self)
