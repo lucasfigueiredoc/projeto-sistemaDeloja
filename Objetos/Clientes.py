@@ -16,7 +16,7 @@ class Cliente():
     
     @nome.setter
     def nome(self, value):
-        self._name = value
+        self._nome = value
     
     @cpf.setter
     def cpf(self, value):
@@ -24,8 +24,7 @@ class Cliente():
     
     @endereco.setter
     def endereco(self, value):
-        self._cpf = value
-        
-    cliente1 = Cliente()
+        self._endereco = value
+  ##  cliente1 = Cliente()
     
     

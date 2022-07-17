@@ -1,4 +1,11 @@
-from Objetos import Clientes
+from http import client
+from tkinter import *
+from Objetos.Clientes import Cliente
+
+
+root = Tk()
+
+root.mainloop()
 
 def ArtMenu():{
     print("----------------------------------"),
@@ -19,7 +26,9 @@ def funCase(x):
 
 def function1():
 
-    Clientes.Cliente._nome (input())
+    Cliente.nome = (input('Insira nome: '))
+    Clientes.Cliente.cpf (input('Insira CPF: '))
+    Clientes.Cliente.endereco (input('Insira endereço: '))
 
     funCase(x)
 
@@ -54,7 +63,7 @@ if __name__ == "__main__":
         "5" : function5
     }
 else:{
-    funCase(x)
+    funCase()
 }
 
 ArtMenu()
