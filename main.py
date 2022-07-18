@@ -1,34 +1,49 @@
-from email.errors import ObsoleteHeaderDefect
-from http import client
-from tkinter import *
+# from email.errors import ObsoleteHeaderDefect
+# from http import client
+# from tkinter import *
+# Imports não necessários (pelo menos atualmente)
+
+from os import system
 from Objetos.Clientes import Cliente
 
 ##root = Tk()
 
-def clienteAdd(clientAd[y]):
-    for i in clienteAd:
-        print('Cadastrando Cliente, adicione os dados respectivamente: \n')
-        clientAd[i] = Cliente(input('Nome: '), input('CPF: '), input('Endereço completo: '))
+# Criamos uma lista vazia
+listaClientes = list()
 
 
+def clienteAdd():
+    print('Cadastrando Cliente, adicione os dados respectivamente: \n')
 
-y=10
+    # Adicionamos um item a nossa lista, neste caso, o objeto
+    # cliente, através do método "append"
 
-clienteAd = [y]
+    listaClientes.append(
+        Cliente(input('Nome: '), input('CPF: '), input('Endereço completo: ')))
 
-def ArtMenu():{
-    print("----------------------------------"),
-    print("     1 : cadastro cliente         "),
-    print("     2 : ver cardapio             "),
-    print("     3 : fazer pedido             "),
-    print("     4 : ver faturamento          "),
-    print("     5 : finalizar                "),
+    # Limpar a tela antes de concluir
+    system("clear")
+    print("Cliente cadastrado com sucesso!")
+
+def ArtMenu():
+    system("clear")
+    print("----------------------------------")
+    print("     1 : cadastro cliente         ")
+    print("     2 : mostrar clientes         ")
+    print("     3 : ver cardapio             ")
+    print("     4 : fazer pedido             ")
+    print("     5 : ver faturamento          ")
+    print("     6 : finalizar                ")
     print("----------------------------------")
     
-}
+
 ##root.mainloop()
 
 def operacao(x):
+    # Aqui, limpamos a tela antes de qualquer outra
+    # operação
+    system("clear")
+
     match x:
         case '1':
             return clienteAdd()
@@ -44,10 +59,19 @@ def operacao(x):
     
         case '5':
             return print('Case 5')
+
+        case '6':
+            exit()
         
         case _:
-            return print('Valor inválido, retorne!'), operacao(input('Define '))
-            
-ArtMenu()
+            return print('Valor inválido, retorne!')
 
-operacao(input('Define '))
+while True:   
+    ArtMenu()
+    operacao(input('Define: '))
+
+    # Toda vez que uma "operação" terminar,
+    # serão exibidos os textos abaixo
+
+    print("----------------------------------")
+    input("Pressione ENTER para continuar...")
