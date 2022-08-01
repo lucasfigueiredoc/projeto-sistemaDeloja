@@ -1,11 +1,14 @@
+import psycopg2
+from bd.objetoDeBanco import bd
 
 
 class Cliente():
+    
     def __init__(self, nome: str, cpf: str, endereco: str):
         self.__nome = nome
         self.__cpf = cpf
         self.__endereco = endereco
-        
+
     @property
     def nome(self):
             return self.__nome
@@ -27,6 +30,10 @@ class Cliente():
     @endereco.setter
     def endereco(self, value):
         self._endereco = value
+        
+    bd.connect()
+        
+    
   ##  cliente1 = Cliente()
     
   ##  def cadastrarCliente(self)

@@ -3,10 +3,12 @@
 # from tkinter import *
 # Imports não necessários (pelo menos atualmente)
 
+
+from bd.connectBD import connect
 from os import system
 from Objetos.Clientes import Cliente
 
-##root = Tk()
+
 
 # Criamos uma lista vazia
 listaClientes = list()
