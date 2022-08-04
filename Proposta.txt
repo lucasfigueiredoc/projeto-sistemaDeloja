@@ -1,0 +1,1 @@
+Este projeto tem como objetivo o uso da linguagem python na utilização de POO e banco de dados, baseado em um simples sistema registrador de loja
